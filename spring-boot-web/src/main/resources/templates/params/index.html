@@ -15,6 +15,12 @@
 	<li>
 		<a th:href="@{/params/string(texto='Que tal')}">/params/string?texto=Que tal</a>
 	</li>
+	<li>
+		<a th:href="@{/params/mix-params(saludo='Como estas', numero=7)}">/params/mix-params?saludo=Como estas&numero=7</a>
+	</li>
+	<li>
+		<a th:href="@{/params/mix-params-request(saludo='Como estas', numero=7)}">/params/mix-params-request?saludo=Como estas&numero=7</a>
+	</li>
 </ul>
 
 </body>
