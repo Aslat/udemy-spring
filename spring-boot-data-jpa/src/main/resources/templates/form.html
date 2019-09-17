@@ -35,19 +35,23 @@
 			<input type="hidden" th:field="*{id}"/>
 			<tr>
 				<td>Nombre</td>
-				<td><input type="text" th:field="*{nombre}" class="form-control"/></td>
+				<td><input type="text" th:field="*{nombre}" class="form-control" th:errorclass="'form-control alert-danger'"/></td>
+				<small class="form-text text-danger" th:if="${#fields.hasErrors('nombre')}" th:errors="*{nombre}"></small>
 			</tr>
 			<tr>
 				<td>Apellido</td>
-				<td><input type="text" th:field="*{apellido}" class="form-control"/></td>
+				<td><input type="text" th:field="*{apellido}" class="form-control"  th:errorclass="'form-control alert-danger'"/></td>
+				<small class="form-text text-danger" th:if="${#fields.hasErrors('apellido')}" th:errors="*{apellido}"></small>
 			</tr>
 			<tr>
 				<td>Email</td>
-				<td><input type="email" th:field="*{email}" class="form-control"/></td>
+				<td><input type="email" th:field="*{email}" class="form-control" th:errorclass="'form-control alert-danger'"/></td>
+				<small class="form-text text-danger" th:if="${#fields.hasErrors('email')}" th:errors="*{email}"></small>
 			</tr>
 			<tr>
 				<td>Fecha</td>
-				<td><input type="text" th:field="*{createAt}" class="form-control"/></td>
+				<td><input type="text" th:field="*{createAt}" class="form-control" th:errorclass="'form-control alert-danger'"/></td>
+				<small class="form-text text-danger" th:if="${#fields.hasErrors('createAt')}" th:errors="*{createAt}"></small>
 			</tr>
 			<tr>
 				<td><input type="submit" value="Crear Cliente" class="btn btn-primary" /></td>
